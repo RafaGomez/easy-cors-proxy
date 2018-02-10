@@ -1,7 +1,7 @@
 {
   "name": "Easy CORS Proxy",
   "description": "Proxy any URL with added CORS headers",
-  "repository": "https://github.com/gcollazo/easy-cors-proxy",
+  "repository": "https://github.com/RafaGomez/easy-cors-proxy",
   "keywords": ["node", "cors", "proxy"],
   "env": {
     "NODE_ENV": "production",
@@ -20,6 +20,11 @@
     "ALLOW_HEADERS": {
       "description": "The HTTP Headers you want to allow. Multiple values separated by comma.",
       "value": "X-Requested-With"
+    },
+    "ADITIONAL_PARAM": {
+      "description": "Appends aditional query string parameters to url.",
+      "value":""
     }
+    
   }
 }
