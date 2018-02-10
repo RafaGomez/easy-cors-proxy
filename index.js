@@ -6,11 +6,12 @@ var port = process.env.PORT || 8000,
     proxyURL = process.env.PROXY_URL || 'http://registry.npmjs.org:80/',
     allowOrigin = process.env.ALLOW_ORIGIN || '*',
     allowMethods = process.env.ALLOW_METHODS || '*',
-    allowHeaders = process.env.ALLOW_HEADERS || 'X-Requested-With'
+    allowHeaders = process.env.ALLOW_HEADERS || 'X-Requested-With',
+    additionalQueryParameters = process.env.ADITIONAL_PARAM || ''
 
 http.createServer(function (req, res) {
-  var r = request(url.resolve(proxyURL, req.url));
-
+  var r = request(url.resolve(proxyURL, req.url+additionalQueryParameters));
+  r.qs.
   // Add CORS Headers
   r.on('response', function(_r) {
     _r.headers['Access-Control-Allow-Origin'] = allowOrigin;

@@ -23,3 +23,6 @@ The HTTP Methods you want to allow. Default value: `*`.
 ### ALLOW_HEADERS
 
 The HTTP Headers you want to allow. Multiple values separated by comma. Default value: `X-Requested-With`.
+
+### ADITIONAL_PARAM
+Appends aditional query string parameters to url.
