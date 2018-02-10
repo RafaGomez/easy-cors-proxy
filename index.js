@@ -11,7 +11,7 @@ var port = process.env.PORT || 8000,
 
 http.createServer(function (req, res) {
   var r = request(url.resolve(proxyURL, req.url+additionalQueryParameters));
-  r.qs.
+
   // Add CORS Headers
   r.on('response', function(_r) {
     _r.headers['Access-Control-Allow-Origin'] = allowOrigin;
